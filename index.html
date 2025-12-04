@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Qatar Business Setup & PRO Services</title>
+  <title>HST Testing Machines | Material Testing Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Company formation, PRO services, visa processing and document clearing in Qatar.">
+  <meta name="description" content="Material testing machines for tensile, compression, impact, fatigue and more.">
   <style>
     :root {
-      --primary: #0056ff;
-      --primary-soft: #e8f0ff;
-      --dark: #101828;
+      --primary: #0051b3;
+      --primary-soft: #e5f0ff;
+      --accent: #f97316;
+      --dark: #111827;
       --muted: #6b7280;
       --bg: #f3f4f6;
       --card: #ffffff;
-      --accent: #16a34a;
       --border: #e5e7eb;
       --radius-lg: 18px;
       --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
@@ -44,14 +44,6 @@
       scroll-padding-top: 80px;
     }
 
-    /* Layout */
-
-    .page {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
     .max-width {
       max-width: 1120px;
       margin: 0 auto;
@@ -60,87 +52,55 @@
 
     /* Header / Nav */
 
-    .topbar {
-      background: #000;
-      color: #f9fafb;
-      font-size: 0.9rem;
-    }
-
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.4rem 1.5rem;
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-
-    .topbar-phone {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .topbar-phone span {
-      font-weight: 600;
-    }
-
-    .topbar-cta a {
-      background: #22c55e;
-      padding: 0.3rem 0.8rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.8rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
     header {
       position: sticky;
       top: 0;
       z-index: 50;
       backdrop-filter: blur(8px);
-      background: rgba(255, 255, 255, 0.92);
-      border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.9);
     }
 
     .nav {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0.6rem 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      padding: 0.7rem 1.5rem;
     }
 
-    .nav-brand {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 0.45rem;
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--dark);
+      gap: 0.6rem;
     }
 
-    .nav-brand-badge {
-      width: 30px;
-      height: 30px;
-      border-radius: 999px;
-      background: var(--primary);
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), #1d4ed8);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
-      font-size: 0.8rem;
       font-weight: 800;
+      font-size: 1rem;
+    }
+
+    .brand-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
+      gap: 1.1rem;
       font-size: 0.95rem;
     }
 
@@ -155,7 +115,7 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: -0.3rem;
+      bottom: -0.25rem;
       width: 0;
       height: 2px;
       background: var(--primary);
@@ -183,7 +143,7 @@
       display: none;
       border: none;
       background: transparent;
-      font-size: 1.45rem;
+      font-size: 1.5rem;
     }
 
     @media (max-width: 768px) {
@@ -195,26 +155,160 @@
       }
     }
 
-    /* Sections */
+    /* Hero */
 
-    main {
-      flex: 1;
+    .hero {
+      padding: 2.8rem 0 3.5rem;
+      background: radial-gradient(circle at top left, #e0edff, #f3f4f6 60%);
     }
 
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2.3rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      margin: 0 0 0.7rem;
+      line-height: 1.2;
+      color: var(--dark);
+    }
+
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-sub {
+      font-size: 0.97rem;
+      color: var(--muted);
+      max-width: 36rem;
+    }
+
+    .hero-meta {
+      margin: 1.1rem 0 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .hero-meta span::before {
+      content: "• ";
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 1.7rem;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.96rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: var(--dark);
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.96rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .hero-stats strong {
+      display: block;
+      color: var(--dark);
+    }
+
+    .hero-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 1.2rem 1.2rem 1.4rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(191, 219, 254, 0.9);
+    }
+
+    .hero-image {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .hero-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-card-text {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* Sections */
+
     section {
-      padding: 3.5rem 0;
+      padding: 3.3rem 0;
     }
 
     .section-header {
-      margin-bottom: 1.75rem;
-      text-align: left;
+      margin-bottom: 1.8rem;
     }
 
     .section-kicker {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.12em;
       color: var(--primary);
       margin-bottom: 0.4rem;
     }
@@ -233,497 +327,259 @@
       font-size: 0.98rem;
     }
 
-    /* Hero */
+    /* Product Categories */
 
-    .hero {
-      padding: 2.5rem 0 3.5rem;
-    }
-
-    .hero-inner {
+    .products-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 2.3rem;
-      align-items: center;
-    }
-
-    .hero-badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero-badge {
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.18rem 0.7rem;
-      border-radius: 999px;
-      background: var(--primary-soft);
-      color: var(--primary);
-    }
-
-    .hero-title {
-      font-size: clamp(1.9rem, 3vw, 2.4rem);
-      margin: 0 0 0.7rem;
-      line-height: 1.25;
-      color: var(--dark);
-    }
-
-    .hero-title span {
-      color: var(--primary);
-    }
-
-    .hero-sub {
-      color: var(--muted);
-      font-size: 0.98rem;
-      max-width: 34rem;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin: 1.2rem 0 1.6rem;
-      font-size: 0.86rem;
-      color: var(--muted);
-    }
-
-    .hero-meta span::before {
-      content: "• ";
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 1.7rem;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      padding: 0.7rem 1.3rem;
-      border-radius: 999px;
-      border: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .btn-outline {
-      border-radius: 999px;
-      padding: 0.7rem 1.3rem;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border: 1px solid var(--border);
-      background: #fff;
-      color: var(--dark);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .hero-trust {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.4rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .hero-trust strong {
-      display: block;
-      color: var(--dark);
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top left, #dbeafe, #eff6ff 40%, #ffffff 70%);
-      border-radius: var(--radius-lg);
-      padding: 1.3rem 1.3rem 1.6rem;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(191, 219, 254, 0.8);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-tagline {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 700;
-      color: #1d4ed8;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero-highlight {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-      color: var(--dark);
-    }
-
-    .hero-list {
-      font-size: 0.86rem;
-      color: #1f2933;
-      padding-left: 1.1rem;
-      margin: 0 0 1rem;
-    }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      border-radius: 999px;
-      padding: 0.3rem 0.7rem;
-      font-size: 0.75rem;
-      background: rgba(22, 163, 74, 0.1);
-      color: #166534;
-      font-weight: 600;
-    }
-
-    .hero-steps {
-      margin-top: 0.7rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* Services */
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.2rem;
-    }
-
-    .service-card {
-      background: var(--card);
-      border-radius: var(--radius-lg);
-      padding: 1.1rem 1.1rem 1.2rem;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-    }
-
-    .service-chip {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--primary);
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-
-    .service-title {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-
-    .service-text {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    @media (max-width: 900px) {
-      .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .services-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* Why Choose Us */
-
-    .why-cards {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.2rem;
-    }
-
-    .why-card {
-      background: var(--card);
-      border-radius: var(--radius-lg);
-      padding: 1.1rem 1.1rem 1.3rem;
-      border: 1px dashed rgba(148, 163, 184, 0.7);
-    }
-
-    .why-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: var(--primary-soft);
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 0.8rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .why-title {
-      font-size: 0.98rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-    }
-
-    .why-text {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    @media (max-width: 900px) {
-      .why-cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .why-cards {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* PRO Services */
-
-    .pro-layout {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.5rem;
-      align-items: flex-start;
-    }
-
-    .pro-list-group {
-      background: var(--card);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-      padding: 1.2rem;
-    }
-
-    .pro-list-group h3 {
-      margin: 0 0 0.6rem;
-      font-size: 0.98rem;
-      font-weight: 700;
-    }
-
-    .pro-list {
-      margin: 0;
-      padding-left: 1.15rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .pro-list li + li {
-      margin-top: 0.25rem;
-    }
-
-    .pro-note {
-      font-size: 0.86rem;
-      color: var(--muted);
-      margin-top: 0.9rem;
-    }
-
-    @media (max-width: 900px) {
-      .pro-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* Steps */
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1.1rem;
     }
 
-    .step-card {
+    .product-card {
       background: var(--card);
       border-radius: var(--radius-lg);
-      padding: 1rem;
       border: 1px solid var(--border);
-      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-direction: column;
     }
 
-    .step-number {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      color: var(--primary);
-      letter-spacing: 0.12em;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
+    .product-img {
+      height: 140px;
+      overflow: hidden;
+      background: #e5e7eb;
     }
 
-    .step-title {
-      font-weight: 700;
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-img img {
+      transform: scale(1.05);
+    }
+
+    .product-body {
+      padding: 0.8rem 0.9rem 1rem;
+      flex: 1;
+    }
+
+    .product-title {
       font-size: 0.96rem;
-      margin-bottom: 0.3rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
     }
 
-    .step-text {
+    .product-text {
       font-size: 0.86rem;
       color: var(--muted);
     }
 
+    .product-link {
+      margin-top: 0.4rem;
+      font-size: 0.84rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
     @media (max-width: 1024px) {
-      .steps-grid {
+      .products-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 640px) {
-      .steps-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* Testimonials */
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.2rem;
-    }
-
-    .testimonial-card {
-      background: var(--card);
-      border-radius: var(--radius-lg);
-      padding: 1rem 1.1rem 1.2rem;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-    }
-
-    .testimonial-name {
-      font-weight: 700;
-      font-size: 0.94rem;
-    }
-
-    .testimonial-location {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 0.35rem;
-    }
-
-    .testimonial-text {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    @media (max-width: 900px) {
-      .testimonials-grid {
+    @media (max-width: 768px) {
+      .products-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 640px) {
-      .testimonials-grid {
+    @media (max-width: 540px) {
+      .products-grid {
         grid-template-columns: minmax(0, 1fr);
       }
     }
 
-    /* Why Qatar */
+    /* Focus / Stats */
 
-    .qatar-box {
-      background: linear-gradient(135deg, #eff6ff, #e0f2fe);
+    .focus-box {
+      background: var(--card);
       border-radius: var(--radius-lg);
-      padding: 1.4rem 1.4rem 1.6rem;
-      border: 1px solid rgba(191, 219, 254, 0.9);
-    }
-
-    .qatar-points {
+      padding: 1.3rem 1.2rem 1.4rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 0.9rem;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 1.4rem;
+      align-items: center;
     }
 
-    .qatar-item-title {
+    .focus-text {
       font-size: 0.94rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-    }
-
-    .qatar-item-text {
-      font-size: 0.88rem;
       color: var(--muted);
     }
 
-    @media (max-width: 640px) {
-      .qatar-points {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .stat-item strong {
+      display: block;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .focus-box {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 540px) {
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* About */
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .about-image {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 0.7rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+    }
+
+    .about-image img {
+      border-radius: 14px;
+      height: 260px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .about-text {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .about-points {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .about-points li {
+      margin-bottom: 0.3rem;
+    }
+
+    .about-points li::marker {
+      color: #16a34a;
+    }
+
+    @media (max-width: 900px) {
+      .about-layout {
         grid-template-columns: minmax(0, 1fr);
       }
     }
 
-    /* CTA strip */
+    /* How it works / Video */
 
-    .cta-strip {
-      margin-top: 1.8rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
+    .how-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.8rem;
       align-items: center;
-      justify-content: space-between;
-      background: #0f172a;
-      color: #f9fafb;
-      padding: 1rem 1.2rem;
+    }
+
+    .how-steps {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .how-steps ol {
+      padding-left: 1.2rem;
+    }
+
+    .how-steps li + li {
+      margin-top: 0.3rem;
+    }
+
+    .video-placeholder {
+      background: #020617;
       border-radius: var(--radius-lg);
-    }
-
-    .cta-strip-title {
-      font-weight: 600;
-      font-size: 0.98rem;
-    }
-
-    .cta-strip-text {
-      font-size: 0.86rem;
-      color: #cbd5f5;
-    }
-
-    .cta-strip-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-    }
-
-    .cta-whatsapp {
-      background: #22c55e;
-      color: #052e16;
-      padding: 0.6rem 1.1rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .cta-outline {
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      padding: 0.6rem 1rem;
-      font-size: 0.9rem;
-      background: transparent;
+      padding: 1rem;
       color: #e5e7eb;
+      position: relative;
+      overflow: hidden;
+      min-height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 640px) {
-      .cta-strip {
-        align-items: flex-start;
+    .video-play {
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
+      border: 2px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .video-play span {
+      margin-left: 2px;
+    }
+
+    @media (max-width: 900px) {
+      .how-layout {
+        grid-template-columns: minmax(0, 1fr);
       }
+    }
+
+    /* News */
+
+    .news-card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 1.1rem 1.1rem 1.3rem;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+    }
+
+    .news-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: var(--dark);
+    }
+
+    .news-date {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-bottom: 0.5rem;
     }
 
     /* Footer */
@@ -740,11 +596,11 @@
       margin: 0 auto;
       padding: 0 1.5rem;
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
+      grid-template-columns: 1.4fr 1fr 1fr;
       gap: 1.6rem;
     }
 
-    .footer-brand {
+    .footer-title {
       font-weight: 700;
       margin-bottom: 0.2rem;
     }
@@ -752,13 +608,12 @@
     .footer-text {
       font-size: 0.86rem;
       color: #9ca3af;
-      max-width: 20rem;
     }
 
     .footer-heading {
       font-weight: 600;
       font-size: 0.9rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .footer-links a {
@@ -774,7 +629,7 @@
 
     .footer-meta {
       max-width: 1120px;
-      margin: 1.4rem auto 0;
+      margin: 1.3rem auto 0;
       padding: 0 1.5rem;
       font-size: 0.8rem;
       color: #6b7280;
@@ -783,7 +638,7 @@
       flex-wrap: wrap;
       gap: 0.6rem;
       border-top: 1px solid rgba(31, 41, 55, 0.8);
-      padding-top: 0.8rem;
+      padding-top: 0.7rem;
     }
 
     @media (max-width: 768px) {
@@ -791,473 +646,534 @@
         grid-template-columns: minmax(0, 1fr);
       }
     }
+
+    /* Floating WhatsApp & Chat */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 1.1rem;
+      bottom: 1.1rem;
+      z-index: 60;
+    }
+
+    .wa-button {
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
+      background: #22c55e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #022c22;
+      font-size: 1.6rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(22, 163, 74, 0.5);
+    }
+
+    .wa-label {
+      position: absolute;
+      right: 60px;
+      bottom: 9px;
+      background: #0f172a;
+      color: #e5e7eb;
+      font-size: 0.8rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .chat-widget-toggle {
+      position: fixed;
+      right: 1.1rem;
+      bottom: 4.6rem;
+      z-index: 60;
+    }
+
+    .chat-btn {
+      background: var(--primary);
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.55rem 1rem;
+      font-size: 0.86rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .chat-window {
+      position: fixed;
+      right: 1.1rem;
+      bottom: 5.6rem;
+      width: 320px;
+      max-width: calc(100% - 2.2rem);
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.35);
+      border: 1px solid var(--border);
+      z-index: 70;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.7rem 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .chat-header span {
+      font-weight: 600;
+    }
+
+    .chat-close {
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .chat-body {
+      padding: 0.7rem 0.9rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: #f9fafb;
+    }
+
+    .chat-form {
+      padding: 0.7rem 0.9rem;
+      display: grid;
+      gap: 0.4rem;
+      background: #fff;
+      border-top: 1px solid var(--border);
+    }
+
+    .chat-form input,
+    .chat-form textarea {
+      padding: 0.5rem 0.6rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 0.85rem;
+      font-family: inherit;
+    }
+
+    .chat-form textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .chat-form button {
+      padding: 0.55rem 0.9rem;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      .chat-window {
+        bottom: 4.6rem;
+        right: 0.6rem;
+        left: 0.6rem;
+        width: auto;
+      }
+    }
   </style>
 </head>
 <body>
-<div class="page">
 
-  <!-- Top bar -->
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-phone">
-        <span>+974 70X X XXX</span>
-        <span>Business setup & PRO desk in Doha</span>
+<header>
+  <div class="nav max-width">
+    <div class="brand">
+      <div class="brand-logo">H</div>
+      <div>
+        <div class="brand-title">HST Testing Group</div>
+        <div class="brand-sub">Material Testing Machines</div>
       </div>
-      <div class="topbar-cta">
-        <a href="https://wa.me/97400000000" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#focus">Focus</a>
+      <a href="#about">Company</a>
+      <a href="#how">How it works</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+    <button class="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="max-width hero-inner">
+      <div>
+        <div class="hero-kicker">Material testing solutions</div>
+        <h1 class="hero-title">
+          Universal, impact and fatigue testing machines for
+          <span>global laboratories.</span>
+        </h1>
+        <p class="hero-sub">
+          HST specializes in the development and production of material testing systems — from
+          electronic and hydraulic universal testing machines to impact and dynamic fatigue testers.
+        </p>
+
+        <div class="hero-meta">
+          <span>Static & dynamic material testing</span>
+          <span>ASTM, ISO and international standards</span>
+          <span>Support for metals, plastics & composites</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#products" class="btn-primary">Explore testing machines</a>
+          <a href="#contact" class="btn-outline">Request a quotation</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>20+ years</strong>
+            Experience in design and manufacture of testing machines.
+          </div>
+          <div>
+            <strong>100+ countries</strong>
+            Installations across universities, labs and factories.
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-image">
+          <!-- replace with your hero image: lab-machine.jpg -->
+          <img src="lab-machine.jpg" alt="Material testing machine in laboratory">
+        </div>
+        <div class="hero-card-title">Universal testing machine in operation</div>
+        <div class="hero-card-text">
+          Placeholder image showing a typical tensile or compression testing setup.
+          Replace <code>lab-machine.jpg</code> with a real photo from your facility.
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="max-width">
+      <header class="section-header">
+        <div class="section-kicker">Product categories</div>
+        <h2 class="section-title">Testing machines for different materials and methods</h2>
+        <p class="section-sub">
+          The product range covers electronic and hydraulic universal testing systems, pendulum impact testers,
+          dynamic fatigue testers and specialized machines for tension, bending and torsion.
+        </p>
+      </header>
+
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="product-img">
+            <!-- replace: electronic-utm.jpg -->
+            <img src="electronic-utm.jpg" alt="Electronic universal testing machine">
+          </div>
+          <div class="product-body">
+            <div class="product-title">Electronic universal testing machines</div>
+            <p class="product-text">
+              Servo-electric systems for tensile, compression and flexure testing with high accuracy
+              and digital control.
+            </p>
+            <div class="product-link">View details &raquo;</div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <!-- replace: hydraulic-utm.jpg -->
+            <img src="hydraulic-utm.jpg" alt="Hydraulic universal testing machine">
+          </div>
+          <div class="product-body">
+            <div class="product-title">Hydraulic universal testing machines</div>
+            <p class="product-text">
+              High-capacity frames for testing metals and structural components with hydraulic power units.
+            </p>
+            <div class="product-link">View details &raquo;</div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <!-- replace: impact-tester.jpg -->
+            <img src="impact-tester.jpg" alt="Pendulum impact testing machine">
+          </div>
+          <div class="product-body">
+            <div class="product-title">Pendulum impact testing machines</div>
+            <p class="product-text">
+              Systems for Charpy and Izod impact tests, with options for low-temperature testing chambers.
+            </p>
+            <div class="product-link">View details &raquo;</div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <!-- replace: fatigue-tester.jpg -->
+            <img src="fatigue-tester.jpg" alt="Dynamic fatigue testing machine">
+          </div>
+          <div class="product-body">
+            <div class="product-title">Dynamic fatigue testing systems</div>
+            <p class="product-text">
+              Servo-hydraulic or servo-electric systems for low and high cycle fatigue, crack growth
+              and durability tests.
+            </p>
+            <div class="product-link">View details &raquo;</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS & STATS -->
+  <section id="focus">
+    <div class="max-width">
+      <header class="section-header">
+        <div class="section-kicker">Focus on material testing</div>
+        <h2 class="section-title">Supporting laboratories and production facilities worldwide</h2>
+      </header>
+
+      <div class="focus-box">
+        <div class="focus-text">
+          HST is dedicated to material testing technology — providing equipment for research institutes,
+          universities, inspection laboratories and manufacturing quality departments.
+          Product lines cover tensile, compression, hardness, impact, bending and fatigue tests.
+        </div>
+        <div class="stats">
+          <div class="stat-item">
+            <strong>16+</strong>
+            Years specializing in testing machines.
+          </div>
+          <div class="stat-item">
+            <strong>150+</strong>
+            Countries and regions served.
+          </div>
+          <div class="stat-item">
+            <strong>Top</strong>
+            Recognized supplier of material testing equipment in its segment.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT COMPANY -->
+  <section id="about">
+    <div class="max-width">
+      <header class="section-header">
+        <div class="section-kicker">About HST</div>
+        <h2 class="section-title">Testing machine manufacturer with international certifications</h2>
+      </header>
+
+      <div class="about-layout">
+        <div class="about-text">
+          <p>
+            HST operates with a dedicated engineering team, production facility and global distribution network.
+            Machines are designed to meet international safety and performance standards, with calibration support
+            and technical training available for customers.
+          </p>
+          <ul class="about-points">
+            <li>Factory area designed for assembly, calibration and quality inspection.</li>
+            <li>Machines conform to major standards such as ISO and ASTM for testing accuracy.</li>
+            <li>Equipment supplied to academic institutions, testing agencies and production plants.</li>
+            <li>Technical service includes remote support, spare parts and on-site commissioning.</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <!-- replace: factory.jpg -->
+          <img src="factory.jpg" alt="HST testing machine factory and office">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS / VIDEO -->
+  <section id="how">
+    <div class="max-width">
+      <header class="section-header">
+        <div class="section-kicker">How it works</div>
+        <h2 class="section-title">See the testing machines in operation</h2>
+        <p class="section-sub">
+          Demonstration videos can show how sample preparation, gripping, loading and data acquisition are
+          performed on HST machines.
+        </p>
+      </header>
+
+      <div class="how-layout">
+        <div class="how-steps">
+          <ol>
+            <li>Select the testing machine capacity and configuration based on your material and standards.</li>
+            <li>Prepare the specimen and install the appropriate grips or fixtures.</li>
+            <li>Use the control software to define test parameters and start the test.</li>
+            <li>Monitor force–displacement or stress–strain curves in real time.</li>
+            <li>Export data and test reports for quality documentation and analysis.</li>
+          </ol>
+        </div>
+        <div class="video-placeholder">
+          <div>
+            <div class="video-play">
+              <span>▶</span>
+            </div>
+            <div>Embed or link your YouTube / local operation video here for customers.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news">
+    <div class="max-width">
+      <header class="section-header">
+        <div class="section-kicker">Latest update</div>
+        <h2 class="section-title">New electronic universal testing system released</h2>
+      </header>
+
+      <div class="news-card">
+        <div class="news-title">500 kN electronic universal testing machine with bending fixture</div>
+        <div class="news-date">Sample announcement</div>
+        <p>
+          A new high-capacity digital testing system has been introduced for tensile and bending applications,
+          suitable for construction materials and metal bars. The machine supports three-point bending fixtures,
+          allowing users to evaluate flexural strength and ductility according to common international standards.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="max-width">
+      <header class="section-header">
+        <div class="section-kicker">Contact & support</div>
+        <h2 class="section-title">Get in touch with HST Testing Group</h2>
+        <p class="section-sub">
+          Share your testing requirements and our team will recommend suitable machines and provide a quotation.
+        </p>
+      </header>
+
+      <div class="contact-layout">
+        <div class="news-card">
+          <div class="news-title">Send us an enquiry</div>
+          <p>
+            Use this simple form to send us your questions. You can also contact us directly using the email,
+            phone or WhatsApp details below.
+          </p>
+          <form class="chat-form" onsubmit="event.preventDefault(); alert('Thank you. We will respond to your enquiry shortly.');">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="text" name="company" placeholder="Company / organization">
+            <textarea name="message" placeholder="Tell us about your material, tests and required capacity" required></textarea>
+            <button type="submit">Submit enquiry</button>
+          </form>
+        </div>
+        <div class="news-card">
+          <div class="news-title">Contact details</div>
+          <p><strong>Address:</strong> Example industrial zone, City, Country</p>
+          <p><strong>Phone:</strong> +86-15910081986</p>
+          <p><strong>Email:</strong> sales@exampletest.com</p>
+          <p><strong>WhatsApp / WeChat:</strong> +86-15910081986</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-title">HST Testing Group</div>
+      <p class="footer-text">
+        Manufacturer of material testing machines for universities, laboratories and industrial customers worldwide.
+      </p>
+    </div>
+    <div>
+      <div class="footer-heading">Site links</div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#focus">Focus</a>
+        <a href="#about">Company</a>
+        <a href="#how">How it works</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Contact</div>
+      <div class="footer-links">
+        <span style="display:block;font-size:0.86rem;color:#9ca3af;">
+          Example address, City, Country
+        </span>
+        <a href="tel:+8615910081986">+86-15910081986</a>
+        <a href="mailto:sales@exampletest.com">sales@exampletest.com</a>
       </div>
     </div>
   </div>
+  <div class="footer-meta">
+    <span>© 2025 HST Testing Group. All rights reserved.</span>
+    <span>Layout inspired by modern material testing equipment websites.</span>
+  </div>
+</footer>
 
-  <!-- Header / nav -->
-  <header>
-    <nav class="nav">
-      <div class="nav-brand">
-        <div class="nav-brand-badge">QB</div>
-        <span>QatarBiz Setup</span>
-      </div>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#pro-services">PRO Services</a>
-        <a href="#steps">How It Works</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact" class="nav-cta">Free Cost Estimate</a>
-      </div>
-      <button class="burger" aria-label="Menu">☰</button>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="max-width hero-inner">
-        <div>
-          <div class="hero-badge-row">
-            <span class="hero-badge">Decades of combined experience</span>
-            <span class="hero-badge">Qatar-based team</span>
-          </div>
-
-          <h1 class="hero-title">
-            Business Setup & PRO Services
-            <span>for Qatar investors</span>
-          </h1>
-
-          <p class="hero-sub">
-            Launch and scale your company in Qatar with a team that handles licensing,
-            visas, attestation and corporate PRO services — so you focus on the business itself.
-          </p>
-
-          <div class="hero-meta">
-            <span>100% foreign ownership options</span>
-            <span>Multi-activity trade licenses</span>
-            <span>Transparent service fees</span>
-          </div>
-
-          <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Get Free Setup Estimate</a>
-            <a href="#steps" class="btn-outline">See how it works</a>
-          </div>
-
-          <div class="hero-trust">
-            <div>
-              <strong>Fast approvals</strong>
-              Mainland, Free Zone & QFC structures.
-            </div>
-            <div>
-              <strong>Dedicated PRO desk</strong>
-              One point of contact for all government work.
-            </div>
-          </div>
-        </div>
-
-        <aside class="hero-card">
-          <div class="hero-tagline">Start in 5 structured steps</div>
-          <div class="hero-highlight">
-            A guided path from idea to incorporation in Qatar.
-          </div>
-          <ul class="hero-list">
-            <li>Business discovery & legal structuring</li>
-            <li>Trade name & license applications</li>
-            <li>Document attestation & translations</li>
-            <li>Residency visas & labor approvals</li>
-            <li>Bank account, WPS & compliance</li>
-          </ul>
-          <div class="hero-pill">Average setup window: 3–6 weeks*</div>
-          <p class="hero-steps">
-            *Timeline may vary depending on activity type, approvals and jurisdiction (Mainland / Free Zone / QFC).
-          </p>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services">
-      <div class="max-width">
-        <header class="section-header">
-          <div class="section-kicker">Our services</div>
-          <h2 class="section-title">Everything you need to establish in Qatar</h2>
-          <p class="section-sub">
-            From initial advisory to day-to-day PRO support, we bundle every required service to
-            help you enter the Qatari market with clarity and confidence.
-          </p>
-        </header>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-chip">Business setup</div>
-            <h3 class="service-title">Company formation</h3>
-            <p class="service-text">
-              Legal structures for Mainland, Free Zone and QFC companies, covering activity selection,
-              commercial registration and articles of association.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-chip">Strategy</div>
-            <h3 class="service-title">Business consulting</h3>
-            <p class="service-text">
-              Market entry strategies, risk assessment and financial assumptions tailored to Qatar’s regulations
-              and sector dynamics.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-chip">Market intel</div>
-            <h3 class="service-title">Market research</h3>
-            <p class="service-text">
-              Industry snapshots and competitor mapping to help you choose the right model, location and licensing structure.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-chip">PRO desk</div>
-            <h3 class="service-title">Government relations</h3>
-            <p class="service-text">
-              End-to-end PRO support for ministries, municipalities, immigration and labor procedures.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-chip">Attestation</div>
-            <h3 class="service-title">Document clearing</h3>
-            <p class="service-text">
-              Attestation, legalisation and notarisation of commercial, educational and personal documents.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-chip">Language</div>
-            <h3 class="service-title">Translation services</h3>
-            <p class="service-text">
-              Legally valid Arabic–English translations for contracts, MoAs and supporting documents.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Us -->
-    <section id="why-us">
-      <div class="max-width">
-        <header class="section-header">
-          <div class="section-kicker">Why choose us</div>
-          <h2 class="section-title">A local team for global investors</h2>
-          <p class="section-sub">
-            We combine on-ground experience with a clear, fixed-fee model so you know exactly
-            what to expect at each stage of your Qatar company setup.
-          </p>
-        </header>
-
-        <div class="why-cards">
-          <article class="why-card">
-            <div class="why-pill">01</div>
-            <h3 class="why-title">100% foreign ownership pathways</h3>
-            <p class="why-text">
-              We structure your company to leverage the latest investment rules, enabling full ownership
-              in eligible sectors without silent partners.
-            </p>
-          </article>
-
-          <article class="why-card">
-            <div class="why-pill">02</div>
-            <h3 class="why-title">Multiple business activities</h3>
-            <p class="why-text">
-              Build a license that supports your real plans — with carefully selected activities that
-              align with your commercial strategy.
-            </p>
-          </article>
-
-          <article class="why-card">
-            <div class="why-pill">03</div>
-            <h3 class="why-title">Clear, fair service fees</h3>
-            <p class="why-text">
-              No hidden extras. You receive a written quote that breaks down government charges
-              and our professional fees separately.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRO Services -->
-    <section id="pro-services">
-      <div class="max-width">
-        <header class="section-header">
-          <div class="section-kicker">PRO & government services</div>
-          <h2 class="section-title">End-to-end support for all formalities</h2>
-          <p class="section-sub">
-            From residency visas to trade license renewals, our PRO desk manages recurring tasks so your team
-            can focus on operations and sales.
-          </p>
-        </header>
-
-        <div class="pro-layout">
-          <div class="pro-list-group">
-            <h3>Residency & immigration</h3>
-            <ul class="pro-list">
-              <li>Investor, partner and employee residence visas</li>
-              <li>Work permits and labor approvals</li>
-              <li>Family sponsorship and dependent visas</li>
-              <li>Visa renewals and status changes</li>
-            </ul>
-          </div>
-
-          <div class="pro-list-group">
-            <h3>Document clearing & licensing</h3>
-            <ul class="pro-list">
-              <li>Commercial registration & trade license processing</li>
-              <li>CR and license renewals & amendments</li>
-              <li>Computer card & establishment ID setup</li>
-              <li>Municipality and other local approvals</li>
-            </ul>
-          </div>
-
-          <div class="pro-list-group">
-            <h3>Attestation & compliance</h3>
-            <ul class="pro-list">
-              <li>Certificate & contract attestation</li>
-              <li>Legalisation & notarisation of documents</li>
-              <li>Tax & regulatory filings coordination</li>
-              <li>Ongoing compliance support for inspections</li>
-            </ul>
-          </div>
-
-          <div class="pro-list-group">
-            <h3>Corporate PRO & admin support</h3>
-            <ul class="pro-list">
-              <li>Share transfers and corporate changes</li>
-              <li>Bank account opening coordination</li>
-              <li>Trademark & brand registrations</li>
-              <li>Day-to-day PRO runs and follow-ups</li>
-            </ul>
-            <p class="pro-note">
-              Custom retainers are available for companies that require ongoing PRO and admin coverage in Qatar.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Steps -->
-    <section id="steps">
-      <div class="max-width">
-        <header class="section-header">
-          <div class="section-kicker">How it works</div>
-          <h2 class="section-title">Start your Qatar company in 5 clear steps</h2>
-          <p class="section-sub">
-            A simple, documented process from your first discovery call until your trade license and
-            residence visas are issued.
-          </p>
-        </header>
-
-        <div class="steps-grid">
-          <article class="step-card">
-            <div class="step-number">Step 1</div>
-            <h3 class="step-title">Discovery call</h3>
-            <p class="step-text">
-              We map your idea, target market and preferred legal structure (Mainland, Free Zone or QFC).
-            </p>
-          </article>
-
-          <article class="step-card">
-            <div class="step-number">Step 2</div>
-            <h3 class="step-title">Feasibility & structure</h3>
-            <p class="step-text">
-              Our consultants outline licensing options, share capital requirements and activity recommendations.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <div class="step-number">Step 3</div>
-            <h3 class="step-title">Name & documentation</h3>
-            <p class="step-text">
-              We reserve your trade name, prepare the MoA and submit incorporation documents to the authorities.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <div class="step-number">Step 4</div>
-            <h3 class="step-title">License & approvals</h3>
-            <p class="step-text">
-              Commercial registration, municipality, immigration and other approvals are followed up by our PRO desk.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <div class="step-number">Step 5</div>
-            <h3 class="step-title">Visas & banking</h3>
-            <p class="step-text">
-              After incorporation, we assist with residence visas and bank account opening so you can begin operations.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials">
-      <div class="max-width">
-        <header class="section-header">
-          <div class="section-kicker">Client feedback</div>
-          <h2 class="section-title">Founders we’ve supported into Qatar</h2>
-          <p class="section-sub">
-            Entrepreneurs from around the world choose QatarBiz Setup as their on-ground partner
-            for a smooth expansion into Qatar.
-          </p>
-        </header>
-
-        <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <div class="testimonial-name">Arjun Mehta</div>
-            <div class="testimonial-location">Tech founder – India</div>
-            <p class="testimonial-text">
-              “The team gave me a clear roadmap with timelines. All registrations and approvals were handled
-              while I focused on product and hiring.”
-            </p>
-          </article>
-
-          <article class="testimonial-card">
-            <div class="testimonial-name">Priya Sharma</div>
-            <div class="testimonial-location">Consulting practice – Kerala</div>
-            <p class="testimonial-text">
-              “They explained each step in simple terms and kept me updated until my trade license and investor visas were issued.”
-            </p>
-          </article>
-
-          <article class="testimonial-card">
-            <div class="testimonial-name">Hasan Rahman</div>
-            <div class="testimonial-location">Logistics business – Bangladesh</div>
-            <p class="testimonial-text">
-              “Very responsive PRO support. Any time we received a request from authorities, they acted quickly and closed it out.”
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Qatar + CTA -->
-    <section id="contact">
-      <div class="max-width">
-        <header class="section-header">
-          <div class="section-kicker">Qatar in 2025 & beyond</div>
-          <h2 class="section-title">Why starting a business in Qatar is more accessible than ever</h2>
-          <p class="section-sub">
-            Regulatory updates and streamlined procedures mean investors can now set up and operate faster —
-            especially when guided by a local team.
-          </p>
-        </header>
-
-        <div class="qatar-box">
-          <div class="qatar-points">
-            <div>
-              <div class="qatar-item-title">Full foreign ownership in key sectors</div>
-              <p class="qatar-item-text">
-                Many activities now allow 100% foreign ownership, subject to approvals, reducing the need
-                for traditional sponsorship structures.
-              </p>
-            </div>
-            <div>
-              <div class="qatar-item-title">Digitalised government services</div>
-              <p class="qatar-item-text">
-                More applications, renewals and payments can be completed online, speeding up processes when
-                your documents are prepared correctly.
-              </p>
-            </div>
-            <div>
-              <div class="qatar-item-title">Free Zone & QFC options</div>
-              <p class="qatar-item-text">
-                Special jurisdictions focused on international investors offer attractive frameworks for service,
-                tech and financial companies.
-              </p>
-            </div>
-            <div>
-              <div class="qatar-item-title">Stable, growth-oriented environment</div>
-              <p class="qatar-item-text">
-                Qatar continues to invest in infrastructure, logistics and knowledge sectors — opening opportunities
-                for regional and global founders.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cta-strip">
-          <div>
-            <div class="cta-strip-title">Ready to estimate your Qatar setup cost?</div>
-            <div class="cta-strip-text">
-              Share your business idea and we’ll email a tailored cost breakdown within one working day.
-            </div>
-          </div>
-          <div class="cta-strip-actions">
-            <a href="https://wa.me/97400000000" target="_blank" rel="noopener" class="cta-whatsapp">
-              Chat on WhatsApp
-            </a>
-            <a href="mailto:info@yourdomain.qa?subject=Qatar%20company%20setup%20estimate" class="cta-outline">
-              Request estimate by email
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">QatarBiz Setup</div>
-        <p class="footer-text">
-          Your trusted partner for business setup, PRO and document clearing services in Qatar.
-        </p>
-      </div>
-
-      <div>
-        <div class="footer-heading">Quick links</div>
-        <div class="footer-links">
-          <a href="#services">Our Services</a>
-          <a href="#steps">How It Works</a>
-          <a href="#pro-services">PRO Services</a>
-          <a href="#contact">Cost Estimate</a>
-        </div>
-      </div>
-
-      <div id="contact-details">
-        <div class="footer-heading">Contact & address</div>
-        <div class="footer-links">
-          <span style="display:block; font-size:0.86rem; color:#9ca3af;">
-            Office 1XX, Business District,<br>Doha, Qatar
-          </span>
-          <a href="tel:+97470000000">+974 70X X XXX</a>
-          <a href="mailto:info@yourdomain.qa">info@yourdomain.qa</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-meta">
-      <span>© 2025 QatarBiz Setup. All rights reserved.</span>
-      <span>Website template inspired by modern Qatar business setup sites.</span>
-    </div>
-  </footer>
+<!-- FLOATING WHATSAPP -->
+<div class="floating-whatsapp">
+  <!-- Change wa.me number to your real WhatsApp -->
+  <a href="https://wa.me/8615910081986" target="_blank" rel="noopener" class="wa-button" aria-label="Chat on WhatsApp">
+    ☎
+  </a>
+  <div class="wa-label">WhatsApp us</div>
 </div>
+
+<!-- CHAT WIDGET -->
+<div class="chat-widget-toggle">
+  <button class="chat-btn" type="button" id="openChatBtn">💬 Chat with us</button>
+</div>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <span>Chat with HST</span>
+    <span class="chat-close" id="closeChatBtn">&times;</span>
+  </div>
+  <div class="chat-body">
+    Our team usually responds during working hours.<br>
+    Leave your email and question, we will reply as soon as possible.
+  </div>
+  <form class="chat-form" onsubmit="event.preventDefault(); alert('Your message has been received. We will contact you by email.');">
+    <input type="text" name="chat_name" placeholder="Your name" required>
+    <input type="email" name="chat_email" placeholder="Your email" required>
+    <textarea name="chat_message" placeholder="Type your question..." required></textarea>
+    <button type="submit">Send message</button>
+  </form>
+</div>
+
+<script>
+  // Simple chat toggle
+  const chatWindow = document.getElementById('chatWindow');
+  const openChatBtn = document.getElementById('openChatBtn');
+  const closeChatBtn = document.getElementById('closeChatBtn');
+
+  openChatBtn.addEventListener('click', () => {
+    chatWindow.style.display = 'flex';
+  });
+
+  closeChatBtn.addEventListener('click', () => {
+    chatWindow.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
